@@ -4,45 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mood-Based AI Chatbot</title>
+    <title>MoodMate AI</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <div class="chat-container">
+    <div class="app-container">
 
+        <!-- Header -->
         <header class="chat-header">
-            <h1>Mood-Based AI Chatbot</h1>
-            <p>Your supportive AI companion</p>
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+
+                <div>
+                    <h1>MoodMate AI</h1>
+                    <p>Your AI companion, your mood, your conversation.</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Online
+            </div>
         </header>
 
-        <main class="chat-messages" id="chatMessages">
-            <div class="message bot-message">
-                Hello! 👋 How are you feeling today?
+
+        <!-- Mood selector -->
+        <section class="mood-panel">
+
+            <div class="mood-heading">
+                <div class="mood-icon">🎭</div>
+
+                <div>
+                    <h2>Choose your mood</h2>
+                    <p>Set the personality for this conversation.</p>
+                </div>
             </div>
+
+            <div class="mood-options">
+
+                <button type="button" class="mood-option active" data-mood="supportive">
+                    <span class="mood-emoji">🤝</span>
+                    <span>Supportive</span>
+                </button>
+
+                <button type="button" class="mood-option" data-mood="happy">
+                    <span class="mood-emoji">😊</span>
+                    <span>Happy</span>
+                </button>
+
+                <button type="button" class="mood-option" data-mood="sad">
+                    <span class="mood-emoji">😢</span>
+                    <span>Sad</span>
+                </button>
+
+                <button type="button" class="mood-option" data-mood="funny">
+                    <span class="mood-emoji">😂</span>
+                    <span>Funny</span>
+                </button>
+
+                <button type="button" class="mood-option" data-mood="calm">
+                    <span class="mood-emoji">😌</span>
+                    <span>Calm</span>
+                </button>
+
+                <button type="button" class="mood-option" data-mood="motivational">
+                    <span class="mood-emoji">💪</span>
+                    <span>Motivational</span>
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- Chat -->
+        <main class="chat-messages" id="chatMessages">
+
+            <div class="message-row bot-row">
+
+                <div class="avatar bot-avatar">✦</div>
+
+                <div class="message bot-message">
+                    <span class="message-label">MoodMate AI</span>
+
+                    <p>
+                        Hello! 👋 I'm here to chat with you.
+                        Choose a mood above and tell me what's on your mind.
+                    </p>
+                </div>
+
+            </div>
+
         </main>
 
+
+        <!-- Input -->
         <form class="chat-input-container" id="chatForm">
 
-            <input
-                type="text"
-                id="userInput"
-                placeholder="Type your message..."
-                autocomplete="off"
-                required
-            >
+            <div class="input-wrapper">
 
-            <button type="submit">
-                Send
-            </button>
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Share what's on your mind..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" class="send-button">
+                    <span>Send</span>
+                    <span>➤</span>
+                </button>
+
+            </div>
 
         </form>
 
+
+        <footer class="chat-footer">
+            Powered by LangChain + Groq
+        </footer>
+
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 </html>
