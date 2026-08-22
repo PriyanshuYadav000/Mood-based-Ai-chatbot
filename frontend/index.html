@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,84 +16,153 @@
 
         <!-- Header -->
         <header class="chat-header">
+
             <div class="brand">
-                <div class="brand-icon">✦</div>
 
-                <div>
-                    <h1>MoodMate AI</h1>
-                    <p>Your AI companion, your mood, your conversation.</p>
+                <div class="brand-icon">
+                    ✦
                 </div>
+
+                <div class="brand-text">
+                    <h1>MoodMate AI</h1>
+
+                    <p>
+                        Your AI companion, your mood, your conversation.
+                    </p>
+                </div>
+
             </div>
 
-            <div class="status">
-                <span class="status-dot"></span>
-                Online
+            <div class="header-actions">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Online
+                </div>
+
+                <button
+                    id="themeToggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
             </div>
+
         </header>
 
 
-        <!-- Mood selector -->
+        <!-- Mood Selector -->
         <section class="mood-panel">
 
             <div class="mood-heading">
-                <div class="mood-icon">🎭</div>
+
+                <div class="mood-icon">
+                    🎭
+                </div>
 
                 <div>
                     <h2>Choose your mood</h2>
-                    <p>Set the personality for this conversation.</p>
+
+                    <p>
+                        Set the personality for this conversation.
+                    </p>
                 </div>
+
             </div>
+
 
             <div class="mood-options">
 
-                <button type="button" class="mood-option active" data-mood="supportive">
+                <button
+                    type="button"
+                    class="mood-option active"
+                    data-mood="supportive"
+                >
                     <span class="mood-emoji">🤝</span>
                     <span>Supportive</span>
                 </button>
 
-                <button type="button" class="mood-option" data-mood="happy">
+
+                <button
+                    type="button"
+                    class="mood-option"
+                    data-mood="happy"
+                >
                     <span class="mood-emoji">😊</span>
                     <span>Happy</span>
                 </button>
 
-                <button type="button" class="mood-option" data-mood="sad">
+
+                <button
+                    type="button"
+                    class="mood-option"
+                    data-mood="sad"
+                >
                     <span class="mood-emoji">😢</span>
                     <span>Sad</span>
                 </button>
 
-                <button type="button" class="mood-option" data-mood="funny">
+
+                <button
+                    type="button"
+                    class="mood-option"
+                    data-mood="funny"
+                >
                     <span class="mood-emoji">😂</span>
                     <span>Funny</span>
                 </button>
 
-                <button type="button" class="mood-option" data-mood="calm">
+
+                <button
+                    type="button"
+                    class="mood-option"
+                    data-mood="calm"
+                >
                     <span class="mood-emoji">😌</span>
                     <span>Calm</span>
                 </button>
 
-                <button type="button" class="mood-option" data-mood="motivational">
+
+                <button
+                    type="button"
+                    class="mood-option"
+                    data-mood="motivational"
+                >
                     <span class="mood-emoji">💪</span>
                     <span>Motivational</span>
                 </button>
 
             </div>
+
         </section>
 
 
-        <!-- Chat -->
-        <main class="chat-messages" id="chatMessages">
+        <!-- Chat Messages -->
+        <main
+            class="chat-messages"
+            id="chatMessages"
+        >
 
             <div class="message-row bot-row">
 
-                <div class="avatar bot-avatar">✦</div>
+                <div class="avatar bot-avatar">
+                    ✦
+                </div>
 
                 <div class="message bot-message">
-                    <span class="message-label">MoodMate AI</span>
+
+                    <span class="message-label">
+                        MoodMate AI
+                    </span>
 
                     <p>
                         Hello! 👋 I'm here to chat with you.
                         Choose a mood above and tell me what's on your mind.
                     </p>
+
                 </div>
 
             </div>
@@ -100,8 +170,11 @@
         </main>
 
 
-        <!-- Input -->
-        <form class="chat-input-container" id="chatForm">
+        <!-- Chat Input -->
+        <form
+            class="chat-input-container"
+            id="chatForm"
+        >
 
             <div class="input-wrapper">
 
@@ -113,9 +186,12 @@
                     required
                 >
 
-                <button type="submit" class="send-button">
+                <button
+                    type="submit"
+                    class="send-button"
+                >
                     <span>Send</span>
-                    <span>➤</span>
+                    <span class="send-icon">➤</span>
                 </button>
 
             </div>
@@ -123,13 +199,16 @@
         </form>
 
 
+        <!-- Footer -->
         <footer class="chat-footer">
             Powered by LangChain + Groq
         </footer>
 
     </div>
 
+
     <script src="./script.js"></script>
 
 </body>
+
 </html>
